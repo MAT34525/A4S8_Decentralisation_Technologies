@@ -28,8 +28,9 @@ npm install
 
 Then you can run the test file :
 
+>[!NOTE]
 > You can test the upload / retrieval of the file by manually, by hard coding the appropriate function call at the end of the `test.js` file 
 
 ```bash
-node test.js
+node .\src\index.js
 ```
