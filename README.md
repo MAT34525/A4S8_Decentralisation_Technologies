@@ -1,46 +1,35 @@
 # ipfs-pinata-deploy-action
 
-# IPFS Pinata service deploy
+>[!CAUTION]
+>Tokens, API keys and secrets are hard coded into the repository,
+>This is an obvious security concern so I limited the key use to 10 times. 
 
-This action deploys to IPFS through Pinata service
+# GitHub Workflow : IPFS Pinata service deploy
 
-## Inputs
+Build by Oleksandr Popov : https://github.com/popovoleksandr/ipfs-pinata-deploy-action/tree/master
 
-### `path`
-**Required** Path to directory which should be sent to Pinata. Default `"build"`.
+# Testing file : test.js
 
-### `pin-name`
-**Required** Human name for pin on Pinata.
+From the official starting guide of Pinata : https://docs.pinata.cloud/sdk/getting-started
 
-### `pinata-api-key`
-**Required** Pinata API key.
+# Installation guide
 
-### `pinata-secret-api-key`
-**Required** Pinata Secret API key.
+First, clone the repository from GitHub : 
 
-### `remove-old`
-Should action also remove old pin(-s) from Pinata service with same name. Default `"false"`.
+```bash
+git clone https://github.com/MAT34525/A4S8_Decentralisation_Technologies
+```
 
-### `verbose`
-**Required** Verbose mode. Default `"false"`.
+Node modules are not installed when cloning the repository, run the following command to install them :
 
-## Outputs
+```bash
+npm install
+```
 
-### `hash`
+Then you can run the test file :
 
-Deployed hash value.
+> You can test the upload / retrieval of the file by manually, by hard coding the appropriate function call at the end of the `test.js` file 
 
-## Example usage
-````
-uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
-with:
-  pin-name: 'My personal site'
-  path: './build'
-  pinata-api-key: 11111111111111111111
-  pinata-secret-api-key: 2222222222222222222222222222222222222222222222222222222222222222
-  verbose: true
-  remove-old: false
-````
-
-## Contributing
-We are open for contribution. If you would like to contribute kindly create pull request. 
+```bash
+node test.js
+```
