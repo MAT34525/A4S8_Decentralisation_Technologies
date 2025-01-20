@@ -10,10 +10,10 @@ jobs:
         id: deploy
         uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
         with:
-          pin-name: 'TESTING (v1.6.3)'
+          pin-name: 'UploadGitHubWorkflow'
           path: './.github/workflows/site2test'
-          pinata-api-key: ${{ secrets.IPFS_PINATA_DEPLOY_ACTION_API_KEY }}
-          pinata-secret-api-key: ${{ secrets.IPFS_PINATA_DEPLOY_ACTION_API_SECRET_KEY }}
+          pinata-api-key: 83e2c2824b20c11c5af9
+          pinata-secret-api-key: cc8893c0f90952dddc8bbd8b1a5c0ad054a1b49302f8602df48b376acb052e62
           verbose: true
           remove-old: false
       # Use the output from the `deploy` step
